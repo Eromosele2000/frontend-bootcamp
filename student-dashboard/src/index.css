@@ -1,0 +1,145 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f7fb;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  color: var(--text-h);
+}
+
+.header p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 220px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 17px;
+  margin: 0;
+  color: var(--text);
+}
+
+.card p {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0 0;
+  color: var(--text-h);
+}
+
+.student-list {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.student-list h2 {
+  color: var(--text-h);
+}
+
+.student-list p {
+  background: white;
+  padding: 14px 18px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+.filter-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #aa3bff;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  opacity: 0.9;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto 20px;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
